@@ -15,7 +15,6 @@ public class ProjAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 3;
         xGoal = 0;
         yGoal = -3f;
         target = new Vector3(xGoal, yGoal, 0.0f);
@@ -24,7 +23,11 @@ public class ProjAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var step = speed * Time.deltaTime; // calculate distance to move
+        // Speed increases with time
+        speed = (Time.time + 30) / 15; // Change last digit to change difficulty (10 for hard, 15 for medium, 20 for easy)
+
+        // Calculate distance to move and move accordingly
+        var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
     }
 

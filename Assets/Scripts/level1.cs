@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class level1 : MonoBehaviour
 {
-
     public GameObject projectile;
     public float yStart;
     public float xStart;
@@ -25,7 +24,7 @@ public class level1 : MonoBehaviour
     public float xGoal;
     public float yGoal;
     private float nextActionTime = 0.0f;
-    public float attackRestPeriod = 1f;
+    private float attackRestPeriod;
 
     // Start is called before the first frame update
     void Start()
@@ -53,8 +52,11 @@ public class level1 : MonoBehaviour
     {
         if (Time.time > nextActionTime)
         {
+            // Decrease attackRestPeriod slightly to increase difficulty
+            attackRestPeriod = Mathf.Pow(1.05f, Time.time * -1) + 0.5f;
+
             nextActionTime = Time.time + attackRestPeriod;
-            
+
             nextAttackKey = Random.Range(0,4);
             switch (nextAttackKey) // can probably write this more efficiently using random selection from array
             {

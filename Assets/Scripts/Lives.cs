@@ -9,7 +9,7 @@ public class Lives : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lives = 0;
+        lives = 3;
     }
 
     // Update is called once per frame
