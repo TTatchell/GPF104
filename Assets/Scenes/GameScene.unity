@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 170912797}
   - component: {fileID: 170912799}
   - component: {fileID: 170912800}
+  - component: {fileID: 170912801}
   m_Layer: 0
   m_Name: BossController
   m_TagString: Untagged
@@ -445,7 +446,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a1a4ff6cea6dccc459966720d4b4dd44, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -541,6 +542,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1624ef38071e46e45a0272240ffcbc50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &170912801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170912791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa010b64582f5404988b981b83ae864d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
 --- !u!1 &198960898
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +944,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
