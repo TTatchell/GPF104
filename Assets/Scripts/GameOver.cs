@@ -21,7 +21,6 @@ public class GameOver : MonoBehaviour
     {
         Debug.Log("GAME OVER");
         Time.timeScale = 0;
-        //SceneManager.LoadScene(sceneName: "GameOver");
-        Application.Quit();
+        SceneManager.LoadScene("GameOver");
     }
 }
