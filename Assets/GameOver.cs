@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void RunGameOver()
     {
-        Debug.Log("GAME OVER")
+        Debug.Log("GAME OVER");
         Time.timeScale = 0;
         //SceneManager.LoadScene(sceneName: "GameOver");
         Application.Quit();
