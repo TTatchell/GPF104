@@ -50,12 +50,12 @@ public class level1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextActionTime)
+        if (Time.timeSinceLevelLoad > nextActionTime)
         {
             // Decrease attackRestPeriod slightly to increase difficulty
-            attackRestPeriod = Mathf.Pow(1.05f, Time.time * -1) + 0.5f;
+            attackRestPeriod = Mathf.Pow(1.05f, Time.timeSinceLevelLoad * -1) + 0.5f;
 
-            nextActionTime = Time.time + attackRestPeriod;
+            nextActionTime = Time.timeSinceLevelLoad + attackRestPeriod;
 
             nextAttackKey = Random.Range(0,4);
             switch (nextAttackKey) // can probably write this more efficiently using random selection from array
