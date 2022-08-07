@@ -11,6 +11,7 @@ public class ProjAttack : MonoBehaviour
     private float yGoal;
     private Vector3 target;
     private GameObject bossController;
+    private float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -39,40 +40,44 @@ public class ProjAttack : MonoBehaviour
             case "dBox":
                 if (Input.GetKey(KeyCode.D))
                 {
+                    distance = Vector3.Distance(transform.position, boxObj.transform.position);
                     GameObject projectile = GetComponent<Collider2D>().gameObject;
                     Destroy(projectile);
                     bossController = GameObject.Find("BossController");
-                    bossController.GetComponent<PointCount>().IncrementPoints();
+                    bossController.GetComponent<PointCount>().IncrementPoints((int)Mathf.Round(distance * 10f));
                 }
                 break;
 
             case "fBox":
                 if (Input.GetKey(KeyCode.F))
                 {
+                    distance = Vector3.Distance(transform.position, boxObj.transform.position);
                     GameObject projectile = GetComponent<Collider2D>().gameObject;
                     Destroy(projectile);
                     bossController = GameObject.Find("BossController");
-                    bossController.GetComponent<PointCount>().IncrementPoints();
+                    bossController.GetComponent<PointCount>().IncrementPoints((int)Mathf.Round(distance * 10f));
                 }
                 break;
 
             case "jBox":
                 if (Input.GetKey(KeyCode.J))
                 {
+                    distance = Vector3.Distance(transform.position, boxObj.transform.position);
                     GameObject projectile = GetComponent<Collider2D>().gameObject;
                     Destroy(projectile);
                     bossController = GameObject.Find("BossController");
-                    bossController.GetComponent<PointCount>().IncrementPoints();
+                    bossController.GetComponent<PointCount>().IncrementPoints((int)Mathf.Round(distance * 10f));
                 }
                 break;
 
             case "kBox":
                 if (Input.GetKey(KeyCode.K))
                 {
+                    distance = Vector3.Distance(transform.position, boxObj.transform.position);
                     GameObject projectile = GetComponent<Collider2D>().gameObject;
                     Destroy(projectile);
                     bossController = GameObject.Find("BossController");
-                    bossController.GetComponent<PointCount>().IncrementPoints();
+                    bossController.GetComponent<PointCount>().IncrementPoints((int)Mathf.Round(distance * 10f));
                 }
                 break;
 

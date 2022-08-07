@@ -18,9 +18,9 @@ public class PointCount : MonoBehaviour
     {
     }
 
-    public void IncrementPoints()
+    public void IncrementPoints(int newPoints)
     {
-        points++;
+        points += (20 - newPoints) / 2;
     }
 
     void OnGUI()
